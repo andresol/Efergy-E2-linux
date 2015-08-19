@@ -1,0 +1,15 @@
+set title "Electricity use chart"
+set grid
+set xlabel "Time"
+set ylabel "Power (kW)"
+set xdata time          # X axis is time
+set format x "%H:%M"
+set timefmt "%m/%d/%y, %H:%M:%S"
+#set yrange ["0":"10000"]
+#set format x "%H:%M"
+#set timefmt "%H:%M:%S"
+set terminal png font arial 14 size 800,600
+set output strftime('/opt/efergy/data/El%F.png', time(0))
+set datafile separator ","
+#xticlabels(sprintf("%s-%s",strcol(1),strcol(2)))
+plot '/opt/efergy/data/energy.csv' using 1:3 title 'Electricity' with lines

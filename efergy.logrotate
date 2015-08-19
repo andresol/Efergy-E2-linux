@@ -1,0 +1,8 @@
+/opt/efergy/data/energy.csv {
+  daily
+  copytruncate
+  missingok
+  dateext
+  dateformat %Y-%m-%d.
+  extension csv
+}
