@@ -5,6 +5,9 @@ Use Efergy E2 on a linux server to display energy usage. It uses RTL_SDR to capt
 daily charts. Logroate for keeping the energy output cvs file in daily files. Last use apache on data/main.html do show it on a
 webserver.
 
+Compile
+gcc EfergyRPI_001.c -lm -o EfergyRPI_001 
+
 crontab:
 
 0,30  *   * * *   root    /usr/bin/gnuplot /opt/efergy/plotter.gpl
