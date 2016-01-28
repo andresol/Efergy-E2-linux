@@ -1,5 +1,7 @@
 /*
  E2 CLASSIC RTL-SDR DECODER via rtl_fm
+Modded by Andre Sollie 
+ 
 Copyright 2013 Nathaniel Elijah
 Permission is hereby granted to use this Software for any purpose
 including combining with commercial products, creating derivative
@@ -22,7 +24,7 @@ rtl_fm -f 433550000 -s 200000 -r 96000 -g 19.7 2>/dev/null | ./EfergyRPI_001
 #include <time.h>
 #include <math.h>
 
-#define VOLTAGE			240	/* Refernce Voltage */
+#define VOLTAGE			230	/* Refernce Voltage */
 #define CENTERSAMP 		100	/* Number of samples needed to compute for the wave center */
 #define PREAMBLE_COUNT		40 	/* Number of high(1) samples for a valid preamble */
 #define MINLOWBIT 		3 	/* Number of high(1) samples for a logic 0 */
